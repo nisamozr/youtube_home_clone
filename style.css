@@ -5,7 +5,26 @@
 body{
     margin: 0;
 }
+.container{
+    /* display: flex; */
+    position: relative;
+
+
+}
+.menu{
+    width: 30px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+ .videos{
+     margin-left: 250px;
+     width: fit-content;
+     /* flex: 6; */
+     /* position: absolute; */
+     /* right: 0; */
+ }
 .video-section{
+ 
     display: grid;
     grid-template-columns: repeat(auto-fill , minmax(250px, 1fr));
     gap: 3rem 1rem;
@@ -13,6 +32,69 @@ body{
     margin: 0 1.5rem;
     border-top: 4px solid #CCC;
 }
+.sidebar {
+    float: left;
+    height: 100%;
+    width: 250px;
+    background-color: white;
+    overflow-y: scroll;
+    /* overflow-x: hidden; */
+   
+    position: fixed;
+}
+
+/* .sidebar:hover {
+   
+} */
+
+.sidebar .title {
+    font-size: 14px;
+    color: #030303;
+}
+
+.sidebar .sidebar-items {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.sidebar-items .sidebar-item {
+    display: flex;
+    align-items: center;
+    padding: 5px 5px;
+}
+
+.sidebar-items .subscriptions {
+    padding-left: 20px;
+}
+
+.sidebar-item span {
+    margin-left: 15px;
+}
+
+.sidebar-items .sidebar-item:hover {
+    cursor: pointer;
+    background-color: #f8f9fa;
+}
+
+.sidebar hr {
+    height: 1px;
+    background-color: #ddd;
+    border: none;
+}
+
+.sidebar .sidebar-item img {
+    border-radius: 50%;
+    width: 24px;
+}
+
+.sidebar a {
+    text-decoration: none;
+}
+   
+
 
 
 .video-container{
@@ -92,6 +174,7 @@ body{
     display: flex;
     overflow: scroll;
     border-radius: 30px;
+    margin-left: 250px;
 }
 
 .category-section::-webkit-scrollbar {
@@ -136,6 +219,10 @@ body{
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 5;
 }
 .logo{
     height: 20px;
@@ -203,5 +290,21 @@ body{
     display: none;
    
 }
+.sidebar{
+    display: none;
+}
+.category-section{
+    margin-left: 0;
+}
+.videos{
+    margin-left: 0;
+
+}
+.menu{
+    margin-right: 0;
+
+}
+
+
 
 }
